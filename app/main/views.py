@@ -5,7 +5,8 @@ from ..models import Pitch, User,Comment,Upvote,Downvote
 from .forms import PitchForm, CommentForm, UpvoteForm
 from flask.views import View,MethodView
 from .. import db
-import markdown2
+
+
 
 '''Views'''
 @main.route('/', methods = ['GET','POST'])
@@ -26,9 +27,6 @@ def index():
 
     return render_template('home.html', title = title, pitch = pitch, motivationalpitch=motivationalpitch, interviewpitch= interviewpitch, chefspitch = chefspitch, hairdressingpitch = hairdressingpitch, upvotes=upvotes)
     
-
-
-
 
 @main.route('/pitches/new/', methods = ['GET','POST'])
 @login_required
