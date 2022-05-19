@@ -1,4 +1,5 @@
  <div class="navbar navbar-dark bg-success" role="navigation">
+  <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>A Minute Pitches</strong> </a>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -8,21 +9,21 @@
                   <span class="icon-bar"></span>
                 </button>
                 <ul>
-                <a style="text-align: center; color: whitesmoke;" class="navbar-brand" href="/pitches/new/"> Post a Pitch </a>
+                <a style="text-align: center; color: palevioletred;" class="navbar-brand" href="/pitches/new/"> Create a new Pitch! </a>
                 </ul>
             </div>
             <div class="navbar-nav">
-                <a style="text-align: center; color: whitesmoke;" class="navbar-brand" href="/"> Home </a>
+                <a style="text-align: center; color: palevioletred;" class="navbar-brand" href="/"> Home </a>
 
             </div>
 
             <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               {% if current_user.is_authenticated %}
-              <li style="color:whitesmoke">{{current_user.username}}</li>
-              <li><a style="color: whitesmoke;"  href="{{url_for('auth.logout')}}">Sign out</a></li>
+              <li style="color:palevioletred">{{current_user.username}}</li>
+              <li><a style="color: palevioletred;"  href="{{url_for('auth.logout')}}">Sign out</a></li>
               {% else %}
-              <li><a style="color: whitesmoke;" href="{{url_for('auth.login')}}">Log in</a></li>
+              <li><a style="color: palevioletred;" href="{{url_for('auth.login')}}">Log in</a></li>
               {%endif%}
             </ul>
           </div>
@@ -30,9 +31,9 @@
 
           <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li style="color:whitesmoke"></li>
-                <li><a style="color: whitesmoke;"  href="{{url_for('auth.logout')}}"></a></li>
-                <li><a style="color: whitesmoke;" href="{{url_for('auth.login')}}"></a></li>
+                <li style="color:palevioletred"></li>
+                <li><a style="color: palevioletred;"  href="{{url_for('auth.logout')}}"></a></li>
+                <li><a style="color: palevioletred;" href="{{url_for('auth.login')}}"></a></li>
               </ul>
             </div>
           

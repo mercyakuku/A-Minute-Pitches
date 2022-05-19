@@ -1,1 +1,6 @@
-/*Styles for the home page*/
+body {
+    background-image: url('./photos/one-minute.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }

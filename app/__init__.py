@@ -4,6 +4,10 @@ from config import config_options
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_simplemde import SimpleMDE
+from flask_wtf.csrf import CSRFProtect
+csrf = CSRFProtect()
+
+
 
 
 # Instances of flask extensions
@@ -25,7 +29,6 @@ def create_app(config_name):
 
     # Initialising application
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://mercy@akuku@localhost/a_minute_pitches'
     simple.init_app(app)
 
     # Creating the app configurations
@@ -41,7 +44,7 @@ def create_app(config_name):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    # Regestering the auth bluprint
+    # Registering the auth bluprint
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
 

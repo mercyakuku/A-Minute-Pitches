@@ -1,6 +1,5 @@
-export SECRET_KEY=
-export DATABASE_URL=postgresql+psycopg2://mercy@akuku@localhost/a_minute_pitches
-export MAIL_USERNAME=
-export MAIL_PASSWORD=
+export SECRET_KEY='SiMa'
+export MAIL_USERNAME='mercygrace'
+export MAIL_PASSWORD='sima23'
 
 python3.9 manage.py server
